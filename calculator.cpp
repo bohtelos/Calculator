@@ -1,10 +1,11 @@
 #include <iostream>
+#include <iomanip>
 
 int main() {
 
 	char op;
-	int a, b;
-	int result;
+	float a, b;
+	float result;
 
 	bool valid = false;
 
@@ -20,24 +21,24 @@ int main() {
 		
 			case '+':
 				result = a + b;
-				std::cout << "The result is: " << result << "\n";
+				std::cout << "The result is: " << std::fixed << std::setprecision(2) << result << "\n";
 				valid = true;
 				break;
 			case '-':
 				result = a - b;
-				std::cout << "The result is: " << result << "\n";
+				std::cout << "The result is: " << std::fixed << std::setprecision(2) << result << "\n";
 				valid = true;
 				break;
 			case '*':
 				result = a * b;
-				std::cout << "The result is: " << result <<"\n";
+				std::cout << "The result is: " << std::fixed << std::setprecision(2) << result <<"\n";
 				valid = true;
 				break;
 			case '/':
 				if (b != 0) {
 				
 				result = a / b;
-				std::cout << "The result is: " << result << "\n";
+				std::cout << "The result is: " << std::fixed << std::setprecision(2) << result << "\n";
 				valid = true;
 				
 				}
