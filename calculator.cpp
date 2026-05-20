@@ -21,24 +21,20 @@ int main() {
 		
 			case '+':
 				result = a + b;
-				std::cout << "The result is: " << std::fixed << std::setprecision(2) << result << "\n";
 				valid = true;
 				break;
 			case '-':
 				result = a - b;
-				std::cout << "The result is: " << std::fixed << std::setprecision(2) << result << "\n";
 				valid = true;
 				break;
 			case '*':
 				result = a * b;
-				std::cout << "The result is: " << std::fixed << std::setprecision(2) << result <<"\n";
 				valid = true;
 				break;
 			case '/':
 				if (b != 0) {
 				
 				result = a / b;
-				std::cout << "The result is: " << std::fixed << std::setprecision(2) << result << "\n";
 				valid = true;
 				
 				}
@@ -46,21 +42,22 @@ int main() {
 				else {
 				
 					std::cout << "Sorry, cannot divide by 0.\n";
-				
+				continue;
 				}
 				break;
 
 			default:
 				std::cout << "Sorry, I did not recognize that character.\n";
 
-				if (!valid) {
-
 					std::cout << "Please try again.\n";
+					continue;
 
-				}
 
 		}
-	
+
+		if (valid) {
+		std::cout << "The result is: " << std::fixed << std::setprecision(2) << result << "\n";
+		}
 	}
 
 	return 0;
